@@ -3,3 +3,5 @@ config.py
 app.db
 venv
 .vim
+.DS_Store
+faces/

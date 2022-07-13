@@ -1,0 +1,22 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="content">
+      <h1>FlaskCards</h1>
+
+      <h2>Guess this person's first name</h2>
+
+      <form method="post" action="{{ url_for('guess') }}">
+        <input type="hidden" id="card_id" name="card_id" value="{{ card.id }}"/>
+        <input type="hidden" id="now" name="now" value="{{ now }}"/>
+        <input type="hidden" id="hash" name="hash" value="{{ hash }}"/>
+        <label for="guess">First name:
+          <input type="text" id="guess" name="guess" autofocus/>
+        </label>
+        <input type="submit" value="Guess"/>
+      </form>
+
+      <img src="{{ url_for('static', filename=card.url_filename) }}"/>
+  </body>
+</html>

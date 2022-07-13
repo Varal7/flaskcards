@@ -1,0 +1,18 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <div class="content">
+      <h1>FlaskCards</h1>
+        <h2>{{ card.name }}</h2>
+        <img src="{{url_for('static', filename=card.url_filename)}}" />
+        {% if trial.correct %}
+        <h2>Correct!</h2>
+        <p>You guessed correctly, in {{ trial.time_spent_in_ms }}ms</p>
+        {% else %}
+        <h2 style="color:#FF0000">Incorrect!</h2>
+        <p>Your guess "{{ trial.guess }}" was incorrect.</p>
+        {% endif %}
+        <a href="{{ url_for('game' )}}" autofocus>Play again</a>
+  </body>
+</html>
