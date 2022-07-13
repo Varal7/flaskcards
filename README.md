@@ -1,4 +1,4 @@
-# GCE
+# FlaskCards
 
 ## Installation
 
