@@ -138,6 +138,7 @@ class User(db.Model):
 class Card(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
+    role = db.Column(db.String(80), nullable=True)
     filename = db.Column(db.String(80), nullable=False)
     trials = db.relationship('Trial', backref='carrd', lazy=True)
 
